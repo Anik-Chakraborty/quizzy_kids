@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="title"
+            type="String" />
+        <variable
+            name="description"
+            type="String" />
+        <variable
+            name="value"
+            type="Integer" />
+        <variable
+            name="color"
+            type="Integer" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/action_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/round_white_shape"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/unfinished_games" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="@{title}"
+                android:textColor="@color/darkPurple"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="@{description}"
+                android:textColor="@color/lightPurple"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progress_circular"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:max="100"
+                android:min="0"
+                android:progress="@{value}"
+                app:indicatorTrackGapSize="3dp"
+                app:trackColor="@color/offPurple" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="monospace"
+                android:text="@{String.valueOf(value)}"
+                android:textColor="@{color}"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "286816929013",
+    "project_id": "quizzykids-1d50b",
+    "storage_bucket": "quizzykids-1d50b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286816929013:android:67aea5b122da861330b1bc",
+        "android_client_info": {
+          "package_name": "com.quizzy.kids"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP-mqI3G1kwhpbIH38020kymv6PP9RsFw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="userName"
+            type="String" />
+        <variable
+            name="scorePoint"
+            type="String" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="30dp"
+        android:paddingBottom="20dp"
+        tools:context=".fragments.dashboardFragment.HomeFragment">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="@{@string/hello_user+` `+userName}"
+                android:textColor="@color/darkPurple"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/score_switch"
+                layout="@layout/score_switch"
+                app:scorePoint="@{scorePoint}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:text="@string/home_would_like"
+            android:fontFamily="monospace"
+            android:layout_marginHorizontal="15dp"
+            android:textSize="25sp"
+            android:textColor="@color/darkPurple"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/slider"
+            android:scrollbars="horizontal"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"/>
+
+        <TextView
+            android:text="@string/unfinished_games"
+            android:fontFamily="monospace"
+            android:textSize="20sp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/darkPurple"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/unFinish_list"
+            android:layout_marginHorizontal="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</layout>

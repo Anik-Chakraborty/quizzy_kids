@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Quizzy Kids</string>
+    <string name="default_web_client_id">286816929013-2qa6fge41u7snhih1b25c0rkt2turq7l.apps.googleusercontent.com</string>
+    <string name="landing_activity_small_txt">Play, Learn and Explore with Exciting Quizzes!</string>
+    <string name="Rank">Rank</string>
+    <string name="Fun">Fun</string>
+    <string name="Home">Home</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_user">Hello,</string>
+    <string name="coin_image_des">coin_image</string>
+    <string name="home_would_like">What you would like to play today!</string>
+    <string name="unfinished_games">Unfinished Games</string>
+</resources>
